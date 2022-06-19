@@ -39,7 +39,7 @@ export default class TradingViewWidget extends PureComponent {
     calendar: PropTypes.bool,
     details: PropTypes.bool,
     enable_publishing: PropTypes.bool,
-    height: PropTypes.number,
+    height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     hideideas: PropTypes.bool,
     hide_legend: PropTypes.bool,
     hide_side_toolbar: PropTypes.bool,
@@ -103,7 +103,7 @@ export default class TradingViewWidget extends PureComponent {
     toolbar_bg: PropTypes.string,
     watchlist: PropTypes.arrayOf(PropTypes.string),
     widgetType: PropTypes.string,
-    width: PropTypes.number,
+    width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     withdateranges: PropTypes.bool
   };
 
@@ -125,7 +125,7 @@ export default class TradingViewWidget extends PureComponent {
     timezone: 'Etc/UTC',
     toolbar_bg: '#F1F3F6',
     widgetType: 'widget',
-    width: 980,
+    width: '100%',
     withdateranges: false
   };
 
